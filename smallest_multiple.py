@@ -1,11 +1,11 @@
-
+import time
 
 def smallest():
-    count = 1
+    count = 2520
     found = False
     while not found:
         valid = True
-        for number in range(1, 20):
+        for number in range(1,20):
             if count % number != 0:
                 valid = False
                 break
@@ -15,7 +15,11 @@ def smallest():
         else:
             print('not valid', count)
 
-        count += 10
+        count += 2520
 
 
+
+start = time.time()
 print('Found smallest: ', smallest())
+end = time.time()
+print('execution time: {} seconds'.format(end-start))
